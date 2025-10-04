@@ -22,18 +22,19 @@ def printLyrics():
         ("Rock that body", 0.08), # 15
     ]
 
-    # Extra pauses between lines (same as in your previous example)
-    delays_after_line = [0.5] * len(lines) # you can customize each one
+   
+    delays_after_line = [0.5] * len(lines)
 
     for i, (line, char_delay) in enumerate(lines):
         for char in line:
             print(char, end="")
             sys.stdout.flush()
             time.sleep(char_delay)
-        print() # line break
+        print() 
         time.sleep(delays_after_line[i])
 
 if __name__ == "__main__":
     import sys
     import time
+
     printLyrics()
